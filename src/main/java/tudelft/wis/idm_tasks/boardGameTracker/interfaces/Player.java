@@ -16,7 +16,7 @@ public interface Player {
      *
      * @return name of the player
      */
-    public String getPlayerName();
+    String getPlayerName();
         // @TODO: Implement this method.
     
     
@@ -25,7 +25,7 @@ public interface Player {
      * 
      * @return nickname of the player
      */
-    public String getPlayerNickName();
+    String getPlayerNickName();
         // @TODO: Implement this method.
     
     
@@ -33,7 +33,7 @@ public interface Player {
      * Returns all the boardgames this player owns (if any).
      * @return collection of boardgames this player owns
      */
-    public Collection<BoardGame> getGameCollection();
+    Collection<BoardGame> getGameCollection();
         // @TODO: Implement this method.
    
     
@@ -42,7 +42,7 @@ public interface Player {
      *
      * @return the string representation of the object
      */
-    public String toVerboseString();
+    String toVerboseString();
         // @TODO: Implement this method.
     
 }
