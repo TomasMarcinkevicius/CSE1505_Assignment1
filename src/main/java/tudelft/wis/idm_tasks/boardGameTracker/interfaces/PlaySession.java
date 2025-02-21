@@ -17,7 +17,7 @@ public interface PlaySession {
      *
      * @return date of the play session
      */
-    public Date getDate();
+    Date getDate();
         // @TODO: Implement this method.
 
     /**
@@ -25,7 +25,7 @@ public interface PlaySession {
      *
      * @return player who hosted/organized this game session
      */
-    public Player getHost();
+    Player getHost();
         // @TODO: Implement this method.
 
     /**
@@ -33,7 +33,7 @@ public interface PlaySession {
      *
      * @return game which was played
      */
-    public BoardGame getGame();
+    BoardGame getGame();
         // @TODO: Implement this method.
 
     /**
@@ -41,7 +41,7 @@ public interface PlaySession {
      *
      * @return collection of players who joined the session
      */
-    public Collection<Player> getAllPlayers();
+    Collection<Player> getAllPlayers();
         // @TODO: Implement this method.
 
     /**
@@ -50,7 +50,7 @@ public interface PlaySession {
      *
      * @return the player who is the winner, or Null if there is no winner
      */
-    public Player getWinner();
+    Player getWinner();
         // @TODO: Implement this method.
 
     /**
@@ -58,7 +58,7 @@ public interface PlaySession {
      *
      * @return an integer representing the approximate playtime in minutes for this session
      */
-    public int getPlaytime();
+    int getPlaytime();
         // @TODO: Implement this method.
 
     /**
@@ -66,7 +66,7 @@ public interface PlaySession {
      *
      * @return the string representation of the object
      */
-    public String toVerboseString();
+    String toVerboseString();
         // @TODO: Implement this method.
 
 }

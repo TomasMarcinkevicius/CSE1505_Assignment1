@@ -24,9 +24,9 @@ public interface BgtDataManager {
      * @param name the player name
      * @param nickname the player nickname
      * @return the new player
-     * @throws java.sql.SQLException DB trouble
+     * @throws BgtException DB trouble
      */
-    public Player createNewPlayer(String name, String nickname) throws BgtException;
+    Player createNewPlayer(String name, String nickname) throws BgtException;
         // @TODO: Implement this method.
 
     /**
@@ -36,7 +36,7 @@ public interface BgtDataManager {
      * @return collection of all players containing the param substring in their names
      * @throws BgtException the bgt exception
      */
-    public Collection<Player> findPlayersByName(String name) throws BgtException;
+    Collection<Player> findPlayersByName(String name) throws BgtException;
         // @TODO: Implement this method.
 
     /**
@@ -49,9 +49,9 @@ public interface BgtDataManager {
      * @param name the name of the game
      * @param bggURL the URL of the game at BoardGameGeek.com
      * @return the new game
-     * @throws SQLException DB trouble
+     * @throws BgtException DB trouble
      */
-    public BoardGame createNewBoardgame(String name, String bggURL) throws BgtException;
+    BoardGame createNewBoardgame(String name, String bggURL) throws BgtException;
         // @TODO: Implement this method.
 
     /**
@@ -61,7 +61,7 @@ public interface BgtDataManager {
      * find "Eclipse: Second Dawn of the Galaxy""
      * @return collection of all boardgames containing the param substring in their names
      */
-    public Collection<BoardGame> findGamesByName(String name) throws BgtException;
+    Collection<BoardGame> findGamesByName(String name) throws BgtException;
         // @TODO: Implement this method.
 
     /**
@@ -76,7 +76,7 @@ public interface BgtDataManager {
      * winners not supported)
      * @return the new play session
      */
-    public PlaySession createNewPlaySession(Date date, Player host, BoardGame game, int playtime, Collection<Player> players, Player winner) throws BgtException;
+    PlaySession createNewPlaySession(Date date, Player host, BoardGame game, int playtime, Collection<Player> players, Player winner) throws BgtException;
         // @TODO: Implement this method.
 
     /**
@@ -86,28 +86,28 @@ public interface BgtDataManager {
      * @return collection of all play sessions from the param date
      * @throws BgtException the bgt exception
      */
-    public Collection<PlaySession> findSessionByDate(Date date) throws BgtException;
+    Collection<PlaySession> findSessionByDate(Date date) throws BgtException;
         // @TODO: Implement this method.
 
     /**
      * Persists a given player to the DB. Note that this player might already exist and only needs an update :-)
      * @param player the player
      */
-    public void persistPlayer(Player player);
+    void persistPlayer(Player player) throws BgtException;
         // @TODO: Implement this method.
 
     /**
      * Persists a given session to the DB. Note that this session might already exist and only needs an update :-)
      * @param session the session
      */
-    public void persistPlaySession(PlaySession session);
+    void persistPlaySession(PlaySession session) throws BgtException;
         // @TODO: Implement this method.
 
     /**
      * Persists a given game to the DB. Note that this game might already exist and only needs an update :-)
      * @param game the game
      */
-    public void persistBoardGame(BoardGame game);
+    void persistBoardGame(BoardGame game) throws BgtException;
         // @TODO: Implement this method.
 
 }
