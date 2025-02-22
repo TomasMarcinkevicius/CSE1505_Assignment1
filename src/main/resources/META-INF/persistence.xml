@@ -1,0 +1,17 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="my-persistence-unit">
+        <class>tudelft.wis.idm_solutions.BoardGameTracker.JPA_Implementation.PlaySession_JPA_Key</class>
+        <class>tudelft.wis.idm_solutions.BoardGameTracker.JPA_Implementation.PlaySession_JPA</class>
+        <class>tudelft.wis.idm_solutions.BoardGameTracker.JPA_Implementation.Player_JPA</class>
+        <class>tudelft.wis.idm_solutions.BoardGameTracker.JPA_Implementation.BoardGame_JPA</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/boardGames2"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="postgres"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+             
